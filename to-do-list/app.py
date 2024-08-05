@@ -16,5 +16,29 @@ def task():
             tasks.append(add)
             print(f"Task {add} has been successfully added")
 
+        elif operation==2:
+            updated_val=input("Enter the task name you want to update =")
+            up=input("Enter new task =")
+            index = tasks.index(updated_val)
+            tasks[index]=up
+            print(f"Updated task {up}")
+
+        elif operation==3:
+            delelte_value=input("Enter task you want to delete = ")
+            if delelte_value in tasks:
+                index = tasks.index(delelte_value)
+                del tasks[index]
+                print(f"Task {delelte_value} has been deleted.")
+    
+        elif operation==4:
+            print(f"Total tasks = {tasks}")
+
+        elif operation==5:
+            print("Closing the application..")
+            break
+        else:
+            print("The entered number is invalid..")
+
+
 if __name__=="__main__":
     task()
